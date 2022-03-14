@@ -5,5 +5,5 @@
 
 output "role-id" {
   description = ""
-  value       = aws_iam_role.role.id
+  value       = values(aws_iam_role.role)[*].id
 }
