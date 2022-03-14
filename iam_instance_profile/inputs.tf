@@ -4,11 +4,6 @@
 # MODULE TERRAFORM AWS IAM
 
 ### AWS IAM INSTANCE PROFILE ###
-variable "enable_iam_instance_profile" {
-    description = ""
-    type        = bool
-}
-
 variable "name_instance_profile" {
     description = ""
     type        = string
