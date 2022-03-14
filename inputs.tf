@@ -21,12 +21,10 @@ variable "role_json" {
 }
 
 
-
 ### AWS IAM INSTANCE PROFILE ###
 variable "enable_iam_instance_profile" {
     description = ""
     type        = bool
-    default     = 0
 }
 
 variable "name_instance_profile" {
