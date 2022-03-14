@@ -7,7 +7,7 @@
 ### AWS IAM ROLE ###
 variable "enable_role" {
     description = ""
-    type        = number
+    type        = bool
 }
 
 variable "role_name" {
@@ -25,7 +25,7 @@ variable "role_json" {
 ### AWS IAM INSTANCE PROFILE ###
 variable "enable_iam_instance_profile" {
     description = ""
-    type        = number
+    type        = bool
     default     = 0
 }
 
@@ -43,7 +43,7 @@ variable "role_id" {
 ### AWS IAM POLICY ###
 variable "enable_policy" {
     description = ""
-    type        = number
+    type        = bool
 }
 
 variable "enable_policy_attachment" {
