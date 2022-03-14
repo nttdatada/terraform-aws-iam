@@ -40,7 +40,7 @@ resource "aws_iam_policy_attachment" "policy_attachment" {
 
     name = var.policy_attachment_name
     roles = var.roles_id
-    policy_arn = aws_iam_policy.policy.arn
+    policy_arn = aws_iam_policy.policy[*].arn
 
     depends_on = []
 }
