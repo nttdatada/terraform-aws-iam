@@ -17,7 +17,7 @@ resource "aws_iam_role" "role" {
 ### AWS IAM - IAM INSTANCE PROFILE ###
 resource "aws_iam_instance_profile" "instance_profile" {
 
-    caunt = var.enable_iam_instance_profile && var.enable_role ? 1 : 0
+    count = var.enable_iam_instance_profile && var.enable_role ? 1 : 0
 
     name = var.name_instance_profile
     role = var.role_id 
