@@ -39,7 +39,7 @@ resource "aws_iam_policy_attachment" "policy_attachment" {
     count = var.enable_policy_attachment && var.enable_policy  && var.enable_role ?  1 : 0
 
     name = var.policy_attachment_name
-    roles = var.role_id
+    roles = var.roles_id
     policy_arn = aws_iam_policy.policy[*].arn
 
     depends_on = []

@@ -64,3 +64,7 @@ variable "policy_attachment_name" {
     type        = string
 }
 
+variable "roles_id" {
+    description = ""
+    type        = list(string)
+}
