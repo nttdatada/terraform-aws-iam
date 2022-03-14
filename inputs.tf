@@ -46,7 +46,7 @@ variable "enable_policy" {
 
 variable "enable_policy_attachment" {
     description = ""
-    type        = number
+    type        = bool
 }
 
 variable "policy_name" {
