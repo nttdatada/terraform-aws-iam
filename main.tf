@@ -23,7 +23,7 @@ resource "aws_iam_instance_profile" "instance_profile" {
     role = var.role_id 
 
     depends_on = [
-      aws_iam_role
+      aws_iam_role.role.name
     ]
 }
 
@@ -45,7 +45,7 @@ resource "aws_iam_policy_attachment" "policy_attachment" {
     policy_arn = aws_iam_policy.policy.arn
 
     depends_on = [
-      aws_iam_role,
-      aws_aim_policy
+      aws_iam_role.role.name,
+      aws_aim_policy.policy.name
     ]
 }
