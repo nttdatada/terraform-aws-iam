@@ -32,27 +32,13 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       
       - name: Terraform Init
-        id: init-${{ matrix.dir }}
+        id: init
         run: terraform init
         working-directory: ${{ matrix.dir }}
 
       - name: Terraform Validade
-        id: validate-${{ matrix.dir }}
+        id: validate
         run: terraform validate -no-color
         working-directory: ${{ matrix.dir }}
       
-      - name: Update Pull Requests
-        uses: actions/github-script@0.9.0
-        with:
-          gitub-token: ${{ secrets.GITHUB_TOKEN }} 
-          script: |
-            const output = `#### Terraform Validation 🤖\`${{ steps.validate-${{ matrix.dir }}.outcome }}\`
-
-            *Pusher: @${{ github.actor }}, Action: \`${{ github.event_name }}\`*`;
-
-            github.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: output
-            })    
+      
