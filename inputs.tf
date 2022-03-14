@@ -59,7 +59,7 @@ variable "policy_json" {
     type        = string
 }
 
-variable "policy_attachament_name" {
+variable "policy_attachment_name" {
     description = ""
     type        = string
 }
