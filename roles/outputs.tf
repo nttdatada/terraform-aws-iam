@@ -7,3 +7,8 @@ output "role-id" {
   description = ""
   value       = aws_iam_role.role.id
 }
+
+output "role-arn" {
+  description = ""
+  value       = aws_iam_role.role.arn
+}
