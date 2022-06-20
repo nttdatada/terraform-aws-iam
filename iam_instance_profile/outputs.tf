@@ -7,3 +7,8 @@ output "instance_profile_name" {
     description = ""
     value = aws_iam_instance_profile.instance_profile.name
 }
+
+output "instance_profile_id" {
+    description = ""
+    value = aws_iam_instance_profile.instance_profile.id
+}
